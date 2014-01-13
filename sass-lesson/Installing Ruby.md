@@ -6,3 +6,8 @@ Download ruby installer, http://rubyinstaller.org/downloads/
 
 	$ gem install sass
 
+## Using SASS
+
+### Configure SCSS conversion watching
+
+	$ sass --watch scss:css
