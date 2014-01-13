@@ -9,6 +9,10 @@ border: 1px solid red;
 h2
 {
 font-size:24px;
+&:before
+{
+content:"Another change is in the works";
+}
 }
 
 }
