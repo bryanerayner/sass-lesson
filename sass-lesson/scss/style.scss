@@ -1,19 +1,58 @@
-body{
+$primary-font: Arial, sans-serif;
+$primary-color: red;
 
-font-family:Helvetica, Arial, sans-serif;
+$large-screen: 45em;
+$medium-screen: 30em;
 
-h1{
-border: 1px solid red;
-}
-
-h2
+h1
 {
-font-size:24px;
-&:before
+border: 1px solid $primary-color;
+font-family: $primary-font;
+}
+
+@mixin clearfix
 {
-content:"Another change is in the works";
-}
+	&:before,
+	&:after
+	{
+	content:" ";
+	display:table;
+	}
+	&:after
+	{
+	clear:both;
+	}
 }
 
+nav{
+	
+	border: 2px solid yellow;
+	
+	ul{
+	margin:0;
+	padding:0;	
+	}
+	
+	@media (min-width:$medium-screen){
+		ul{
+		border:5px solid orange;
+		}
+	}
+	
+	@media (min-width:$large-screen){
+	ul{
+		border-width: 1px;
+		padding:0;
+		@include clearfix;
+	
+	}
+	
+	li{
+	background:#eaeaea;
+	float:left;
+	margin-left:10px;
+	&:first-child{margin-left:0px;}
+	}
+	
+	}
 }
-

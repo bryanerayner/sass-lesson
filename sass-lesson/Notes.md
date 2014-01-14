@@ -18,6 +18,16 @@ Download ruby installer, http://rubyinstaller.org/downloads/
 
 ### Generate source file for use with Chrome Dev Tools
 
-	Single file: 
+First, SASS must be at the pre release version, 3.3.0. Install using this code:
+
+	$ gem install
+
+Single file: 
 	
 	$ sass --watch scss:css --sourcemap sass/styles.scss:styles.css
+
+	
+	
+Funny broswer things
+
+-Instead of last child, put the styles on everything and remove stuff from the first child.

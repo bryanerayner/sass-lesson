@@ -1,1 +1,27 @@
-body{font-family:Helvetica, Arial, sans-serif}body h1{border:1px solid red}body h2{font-size:24px}
+h1 {
+  border: 1px solid red;
+  font-family: Arial, sans-serif; }
+
+nav {
+  border: 2px solid yellow; }
+  nav ul {
+    margin: 0;
+    padding: 0; }
+  @media (min-width: 30em) {
+    nav ul {
+      border: 5px solid orange; } }
+  @media (min-width: 45em) {
+    nav ul {
+      border-width: 1px;
+      padding: 0; }
+      nav ul:before, nav ul:after {
+        content: " ";
+        display: table; }
+      nav ul:after {
+        clear: both; }
+    nav li {
+      background: #eaeaea;
+      float: left;
+      margin-left: 10px; }
+      nav li:first-child {
+        margin-left: 0px; } }
