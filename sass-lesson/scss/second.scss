@@ -1,0 +1,114 @@
+@import "partials/clearfix";
+
+$media-medium: 40em;
+$media-large: 55em;
+
+
+$nav_link_background-color: #eaeaea;
+
+$_col_background-color: orange;
+
+body{
+	border:1px solid red;	
+}
+
+.banner
+{
+	height:300px;
+}
+
+nav
+{
+	ul{
+		padding:0;
+		margin:0;
+	}
+
+	li
+	{
+		margin-top:1em;
+		list-style-type: none;
+
+		&:first-child
+		{
+			margin-top:0;
+		}
+	}
+
+	a
+	{
+		display:block;
+		background:$nav_link_background-color;
+		padding:1em;
+	}
+
+	@media(min-width: $media-medium)
+	{
+		li
+		{
+			float:left;
+			margin-left:1em;
+			margin-top: 0;
+
+			&:first-child{				
+				margin-left: 0;
+			}
+
+			a{
+				display:block;
+				background: $nav_link_background-color;
+			}
+		}
+	}
+	
+}
+
+
+.container{
+	margin:0 auto;
+	border: 1px solid red;
+
+	@media (min-width: $media-medium)
+	{
+		width:$media-medium;
+	}
+
+	@media (min-width: $media-large)
+	{
+		width:$media-large;
+	}
+}
+
+.col-container{
+	@include clearfix;
+	width:100%;
+}
+
+[class*="col"]
+{
+	margin-top:1em;
+	padding-top: 1em;
+	border-top:1px solid blue;
+	&:first-child{margin-top: 0; padding-top:0; border: none;}
+
+	@media (min-width: $media-medium) {
+		float:left;
+		margin-top: 0;
+		padding-top: 0;
+		border-top: none;
+	}
+}
+
+$column_count: 12;
+
+@for $i from 1 through $column_count {
+	.col-#{$i} {		
+		width:95%;
+		padding: 0 2.5%;
+		background: $_col_background-color;
+
+		@media (min-width: $media-medium) {
+			width: percentage(1 / $i) - 5%;
+		}
+	}
+}

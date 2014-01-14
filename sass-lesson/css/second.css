@@ -1,0 +1,159 @@
+body {
+  border: 1px solid red; }
+
+.banner {
+  height: 300px; }
+
+nav ul {
+  padding: 0;
+  margin: 0; }
+nav li {
+  margin-top: 1em;
+  list-style-type: none; }
+  nav li:first-child {
+    margin-top: 0; }
+nav a {
+  display: block;
+  background: #eaeaea;
+  padding: 1em; }
+@media (min-width: 40em) {
+  nav li {
+    float: left;
+    margin-left: 1em;
+    margin-top: 0; }
+    nav li:first-child {
+      margin-left: 0; }
+    nav li a {
+      display: block;
+      background: #eaeaea; } }
+
+.container {
+  margin: 0 auto;
+  border: 1px solid red; }
+  @media (min-width: 40em) {
+    .container {
+      width: 40em; } }
+  @media (min-width: 55em) {
+    .container {
+      width: 55em; } }
+
+.col-container {
+  width: 100%; }
+  .col-container:before, .col-container:after {
+    content: " ";
+    display: table; }
+  .col-container:after {
+    clear: both; }
+
+[class*="col"] {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 1px solid blue; }
+  [class*="col"]:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border: none; }
+  @media (min-width: 40em) {
+    [class*="col"] {
+      float: left;
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none; } }
+
+.col-1 {
+  width: 95%;
+  padding: 0 2.5%;
+  background: orange; }
+  @media (min-width: 40em) {
+    .col-1 {
+      width: 95%; } }
+
+.col-2 {
+  width: 95%;
+  padding: 0 2.5%;
+  background: orange; }
+  @media (min-width: 40em) {
+    .col-2 {
+      width: 45%; } }
+
+.col-3 {
+  width: 95%;
+  padding: 0 2.5%;
+  background: orange; }
+  @media (min-width: 40em) {
+    .col-3 {
+      width: 28.33333%; } }
+
+.col-4 {
+  width: 95%;
+  padding: 0 2.5%;
+  background: orange; }
+  @media (min-width: 40em) {
+    .col-4 {
+      width: 20%; } }
+
+.col-5 {
+  width: 95%;
+  padding: 0 2.5%;
+  background: orange; }
+  @media (min-width: 40em) {
+    .col-5 {
+      width: 15%; } }
+
+.col-6 {
+  width: 95%;
+  padding: 0 2.5%;
+  background: orange; }
+  @media (min-width: 40em) {
+    .col-6 {
+      width: 11.66667%; } }
+
+.col-7 {
+  width: 95%;
+  padding: 0 2.5%;
+  background: orange; }
+  @media (min-width: 40em) {
+    .col-7 {
+      width: 9.28571%; } }
+
+.col-8 {
+  width: 95%;
+  padding: 0 2.5%;
+  background: orange; }
+  @media (min-width: 40em) {
+    .col-8 {
+      width: 7.5%; } }
+
+.col-9 {
+  width: 95%;
+  padding: 0 2.5%;
+  background: orange; }
+  @media (min-width: 40em) {
+    .col-9 {
+      width: 6.11111%; } }
+
+.col-10 {
+  width: 95%;
+  padding: 0 2.5%;
+  background: orange; }
+  @media (min-width: 40em) {
+    .col-10 {
+      width: 5%; } }
+
+.col-11 {
+  width: 95%;
+  padding: 0 2.5%;
+  background: orange; }
+  @media (min-width: 40em) {
+    .col-11 {
+      width: 4.09091%; } }
+
+.col-12 {
+  width: 95%;
+  padding: 0 2.5%;
+  background: orange; }
+  @media (min-width: 40em) {
+    .col-12 {
+      width: 3.33333%; } }
+
+/*# sourceMappingURL=second.css.map */

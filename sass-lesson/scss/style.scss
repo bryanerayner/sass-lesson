@@ -1,3 +1,5 @@
+@import "partials/clearfix";
+
 $primary-font: Arial, sans-serif;
 $primary-color: red;
 
@@ -10,19 +12,6 @@ border: 1px solid $primary-color;
 font-family: $primary-font;
 }
 
-@mixin clearfix
-{
-	&:before,
-	&:after
-	{
-	content:" ";
-	display:table;
-	}
-	&:after
-	{
-	clear:both;
-	}
-}
 
 nav{
 	
