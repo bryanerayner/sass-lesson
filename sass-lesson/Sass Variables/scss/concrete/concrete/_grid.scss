@@ -1,0 +1,117 @@
+$build-html-grid:true !default;
+$default-float-direction: left !default;
+$default-row-width: 1024px !default;
+$default-gutter-column: 20px !default;
+
+@if ($default-float-direction == left)
+{
+	$opposite-float-direction: right;
+}else
+{
+	$opposite-float-direction: left;
+}
+
+@mixin container()
+{
+	@extend %clearfix;
+
+
+}
+
+/**
+ * @mixin grid-row
+ * 
+ * @description Make a selector a grid row. Includes clearfix.
+ * 
+ * @param {string} [behaviour=false] The layout. Either nest, collapse, nest-collapse.
+ * @param {width} [gutter-column=$default-gutter-column] Gutter width of the columns. Outer margins
+ * @param {width} [row-width=$default-row-width] Max-width of the row.
+ * 
+ * @type {row}
+ */
+@mixin grid-row($behaviour: false, $gutter-column: $default-gutter-column, $row-width: $default-row-width)
+{
+	// Intended for rows that nest inside of other rows.
+	@if ($behaviour == nest)
+	{
+		width:auto; //Reset the width. Fill to take the space available.
+		margin-#{$default-float-direction}: -($gutter-column/2);
+		margin-#{$opposite-float-direction}: -($gutter-column/2);
+		margin-top:0;
+		margin-bottom:0;
+		max-width:none;
+	}
+	@else if($behaviour == collapse)
+	{
+		// Collapse - take out the outer margins.
+		width: 100%;
+		margin: 0;
+		max-width: $row-width;
+	}
+	@else if ($behaviour == nest-collapse)
+	{
+		// Nest and collapse.
+		width: auto;
+		margin: 0;
+		max-width: none;
+	}
+	@else
+	{
+		// Default - Basic rows. 100% width, centered. 
+
+		// Explicitly define margin.
+		
+		width:100%;
+		margin-#{$default-float-direction}: auto;
+		margin-#{$default-float-direction}: auto;
+		margin-top:0;
+		margin-bottom: 0;
+		max-width: $row-width;	
+	}
+
+	@include clearfix();
+
+
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************
+
+	Build HTML Classes
+
+********************/
+
+
+@if ($build-html-grid)
+{
+	.container{
+		@include container();
+	}
+}

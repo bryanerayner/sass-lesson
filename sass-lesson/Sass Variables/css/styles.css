@@ -1,10 +1,50 @@
-.container {
-  border: 1px solid green; }
-  @media (min-width: 600px) {
-    .container {
-      width: 600px; } }
+/*
+remPx - http://davidwalsh.name/rem-px-browser-function-sass
 
-h1 {
-  border: 1px solid red; }
+ */
+/* This variable refers to the default browser's font-size, 
+ and 1rem = 16px. For more maintainability, we store the value 
+ in a variable in order to reuse it or to change it easily. */
+.container:before,
+.container:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.container:after {
+  clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.container {
+  *zoom: 1; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */ }
+
+/**
+ * @mixin grid-row
+ * 
+ * @description Make a selector a grid row. Includes clearfix.
+ * 
+ * @param {string} [behaviour=false] The layout. Either nest, collapse, nest-collapse.
+ * @param {width} [gutter-column=$default-gutter-column] Gutter width of the columns. Outer margins
+ * @param {width} [row-width=$default-row-width] Max-width of the row.
+ * 
+ * @type {row}
+ */
+/********************
+
+	Build HTML Classes
+
+********************/
 
 /*# sourceMappingURL=styles.css.map */
